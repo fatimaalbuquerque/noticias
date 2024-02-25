@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialised;
 }
 
 :root {
@@ -19,5 +21,52 @@ body {
 }
 
 .header-mobile {
-    
+    display: flex;
+    /* alinha no eixo principal (horizontal) */
+    justify-content: space-between;
+    /* eixo transversal (vertical) */
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+.header-mobile button {
+    border: none;
+    background: none;
+}
+
+.primeira-secao {
+    margin-bottom: 4rem;
+}
+
+.primeira-secao img {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.primeira-secao h1 {
+    font-size: 2.5rem;
+    /* 100% seria a msm coisa do font size */
+    line-height: 100%;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.primeira-secao p {
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+    color: var(--gumetal);
+    margin-bottom: 1.5rem;
+}
+
+.primeira-secao button {
+    padding: 0.75rem 2rem;
+    background-color: var(--vermillion);
+    border: none;
+    text-transform: uppercase;
+    color: var(--almost-white);
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.275rem;
+    line-height: 1.5rem;
 }
