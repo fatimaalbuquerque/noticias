@@ -31,7 +31,7 @@ body.escurecer::before {
     background-color: rgba(0, 0, 26, 0.5);
 }
 
-.header-mobile {
+header {
     display: flex;
     /* alinha no eixo principal (horizontal) */
     justify-content: space-between;
@@ -39,15 +39,17 @@ body.escurecer::before {
     align-items: center;
 
     margin-bottom: 2rem;
+    max-width: 1110px;
+    margin-inline: auto;
 }
 
-.header-mobile button {
+header button {
     border: none;
     background: none;
     width: fit-content;
 }
 
-.header-mobile nav {
+header nav.mobile {
     position: fixed;
     background-color: var(--almost-white);
     right: -16rem;
@@ -66,21 +68,26 @@ body.escurecer::before {
     transition: 0.7s;
 }
 
-.header-mobile nav.abrir {
+header nav.mobile.abrir {
     right: 0;
 }
 
-.header-mobile nav button {
+header nav button {
     align-self: flex-end;
     margin-bottom: 4rem;
 }
 
 /* a = âncoras */
-.header-mobile nav a {
+header .mobile a {
     text-decoration: none;
     color: var(--dark-blue);
     font-size: 1.125rem;
     line-height: 1.5rem;
+}
+
+main {
+    max-width: 1110px;
+    margin-inline: auto;
 }
 
 .primeira-secao {
@@ -182,4 +189,37 @@ body.escurecer::before {
     color: var(--gumetal);
     font-size: 0.9375rem;
     line-height: 1.625rem;
+}
+
+
+
+@media(min-width: 1110px) {
+    main {
+        /* transformar o site em uma tabela */
+        display: grid;
+        /* quantas colunas, fr = fração da tela */
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.75rem;
+    }
+
+    .primeira-secao {
+        /* primeira seção vai ocupar 2 frações, da linha imaginária 1 até a 3 */
+        grid-column: 1 / 3;
+    }
+
+    header > button {
+        display: none;
+    }
+
+    header .desktop  {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    header .desktop a {
+        text-decoration: none;
+        color: var(--gumetal);
+        font-size: 0.9375rem;
+        line-height: 1.625;
+    }
 }

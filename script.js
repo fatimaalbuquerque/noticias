@@ -1,11 +1,11 @@
 // document se refere ao html
 // querySelector faz uma busca pelo elemento html
 
-const botaoAbrir = document.querySelector(".header-mobile > button")
-const botaoFechar = document.querySelector(".header-mobile nav button")
+const botaoAbrir = document.querySelector("header > button")
+const botaoFechar = document.querySelector("header nav button")
 
 const body = document.querySelector("body")
-const nav = document.querySelector(".header-mobile nav")
+const nav = document.querySelector("header .mobile")
 
 // adicionar um ouvinte de evento, que monitora o que vai acontecer, neste caso seria um click, e assim faz uma função, que essa seria abrirMenu
 botaoAbrir.addEventListener('click', abrirMenu)
